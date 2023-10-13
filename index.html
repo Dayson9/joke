@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random-Joke-Generator</title>
+  <style>
+  body{
+  background:hsla(91, 4%, 10%, 1);
+  }
+  .container{
+  width: 340px;
+  height: 500px;
+  background:hsla(91, 3%, 21%, 1);
+  text-align: center;
+  margin: 0 auto;
+ border-radius: 5px; 
+ border: 2px solid #E69100;
+ margin-top: 30px;
+  }  
+  h1{
+  text-align: center;
+  color: #E69100;
+  margin-top: 30px;
+  } 
+  #generate{
+  width: 150px;
+  height: 45px;
+  color: white;
+margin-top: 250px;
+  text-align: center;
+  font-size: 15px;
+  border: 2px solid #E69100;
+  border-radius: 50px;
+  background: #E69100;
+  transition: 0.3s;
+  }
+  #generate:hover{
+  outline: none;
+  }
+  #out{
+  color: silver;
+margin-top: 40px;
+transition-duration: 0.4s;
+  }
+  </style>
+</head>
+
+<body>
+<h1>Joke Generator</h1>
+<div class="container">
+<h5 id="out">Loading...</h5>
+<button id="generate">Generate</button>
+</div>
+<script src="script.js"></script>
+
+
+</body>
+</html>
