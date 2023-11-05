@@ -1,28 +1,24 @@
+ 
 var generate= document.querySelector("#generate")
 var output= document.querySelector("#out")
-var c= 0
-window.onload =()=> {
+window.onload =()=>{
 getJoke()
 }
 
 async function getJoke(){
-fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=single").then(req => req.json()).then(out=> output.innerHTML= out.joke
-)
-}
-
-generate.onclick= ()=>{
+fetch("https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun,Spooky?blacklistFlags=sexist,explicit").then(req => req.json()).then((out)=>{
+if(out.type === "twopart"){
+  output.innerHTML= out.setup+"\n\n"+out.delivery
+}else{
 getJoke()
 }
+}
+  )
+
+}
+
+
 
 generate.ontouchstart= ()=>{
-out.innerHTML= "Loading..."
-generate.style.opacity= 0.5
-var int= setInterval(()=>{
-c+=100
-if(c== 300){
-generate.style.opacity= 1
-clearInterval(int)
-c= 0
+getJoke()
 }
-},100)
-} 
